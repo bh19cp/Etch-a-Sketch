@@ -8,39 +8,59 @@
     text-decoration: none;
 }
 
-.intro{
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header{
+    height: 20vh;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
     font-size: x-large;
-    justify-content:flex-end
 }
-.console{
-    height: 80vh;
+
+main{
     width: 100vw;
     display: flex;
-    justify-content:space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 4rem;
     align-items: center;
 }
 
 .settings{
-    height: 60vh;
-    width: 15vw;
+    min-width: 100px;
+    height: 300px;
     border: 4px #9CEC5B solid;
 }
-.sketch-zone{
-    height: 60vh;
-    width: 40vw;
-    border: 4px #9CEC5B solid;
+#container {
+	position: relative;
+	top: 30px;
+	outline:4px solid #9CEC5B ;
+	font-size: 0;
+	margin:auto;
+	height:300px;
+	width:300px;
+	padding: 0;
+	border: none;
 }
 
-.footer{
-    height: 5vh;
+.grid{
+    background-color: white;
+    display: inline-block;
+    outline:1px solid #000;
+}
+
+.grid-square{
+    display:inline-table;
+}
+
+footer{
+    gap: 1rem;
     width: 100vw;
+    height: 10vh;
     display: flex;
     justify-content: center;
-    align-items:first baseline;
+    align-items: center;
 }
 
 

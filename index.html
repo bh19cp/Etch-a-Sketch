@@ -6,22 +6,24 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="intro">
+    <header>
         <h1>Etch-a-Sketch</h1>
         <h3>Draw something that will make you proud.</h3>
-    </div>
-    <div class="console">
+    </header>
+
+    <main>
         <div class="settings"></div>
-        <div class="sketch-zone"></div>
-    </div>
-    <div class="footer">
+        <div id="container" onmousedown="isPressed(true)" onmouseup="isPressed(false)"></div>
+    </main>
+    <footer>
         <p>Copyright © 2023 Ana Ferreira  </p>
         <a href="https://github.com/bh19cp">
             <i class="fa fa-github" style="font-size:36px"></i>
         </a>
-    </div>
+    </footer>
 </body>
 </html>
