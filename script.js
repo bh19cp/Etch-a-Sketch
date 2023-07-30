@@ -1,28 +1,28 @@
-const DEFAULTSIZE = 16;
+const DEFAULTSIZE = 60;
 
 let mousedown = false;
+let isErasing = false;
+
+document.addEventListener("mousedown", () => mousedown = true);
+document.addEventListener("mouseup", () => mousedown = false);
 
 loadGrid(DEFAULTSIZE);
-
-
 
 function loadGrid(size) {
 
     for (let i = 0; i < DEFAULTSIZE * DEFAULTSIZE; i++) {
-        $("#container").append("<div class='grid' onmouseover = changeColor()></div>");
+        let div = document.createElement("div");
+        div.classList.add("grid");
+        div.setAttribute("onmouseover", "changeColor(this)");
+        div.setAttribute("style",  `width: ${300/size}px ; height: ${300/size}px` );
+        document.getElementById("container").appendChild(div);
     };
-    
-    $(".grid").width(300/DEFAULTSIZE);
-    $(".grid").height(300/DEFAULTSIZE);
 }
 
-function isPressed(val) {
-    mousedown = val;
-}
-
-function changeColor() {
+function changeColor(square) {
+    console.log(`color changed :  ${mousedown} on ${square}`);
     if(mousedown)
-        $(".grid").css("background-color","black");
+        square.style.backgroundColor = "black";
 }
 
 
