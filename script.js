@@ -1,12 +1,14 @@
 const DEFAULTSIZE = 60;
+const settingsOps = document.querySelectorAll(".settings i");
 
 let mousedown = false;
 let isErasing = false;
 
-document.addEventListener("mousedown", () => mousedown = true);
-document.addEventListener("mouseup", () => mousedown = false);
 
 loadGrid(DEFAULTSIZE);
+
+document.addEventListener("mousedown", () => mousedown = true);
+document.addEventListener("mouseup", () => mousedown = false);
 
 function loadGrid(size) {
 
