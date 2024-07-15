@@ -4,35 +4,31 @@ const settingsOps = document.querySelectorAll(".settings i");
 let mousedown = false;
 let isErasing = false;
 
-
 loadGrid(DEFAULTSIZE);
 
-document.addEventListener("mousedown", () => mousedown = true);
-document.addEventListener("mouseup", () => mousedown = false);
+document.addEventListener("mousedown", () => (mousedown = true));
+document.addEventListener("mouseup", () => (mousedown = false));
 
 function loadGrid(size) {
+  let container = document.getElementById("container");
 
-    for (let i = 0; i < DEFAULTSIZE * DEFAULTSIZE; i++) {
-        let div = document.createElement("div");
-        div.classList.add("grid");
-        div.setAttribute("onmouseover", "changeColor(this)");
-        div.setAttribute("style",  `width: ${300/size}px ; height: ${300/size}px` );
-        document.getElementById("container").appendChild(div);
-    };
+  // Using offsetWidth and offsetHeight
+  let offsetWidth = container.offsetWidth;
+  let offsetHeight = container.offsetHeight;
+
+  for (let i = 0; i < DEFAULTSIZE * DEFAULTSIZE; i++) {
+    let div = document.createElement("div");
+    div.classList.add("grid");
+    div.setAttribute("onmouseover", "changeColor(this)");
+    div.setAttribute(
+      "style",
+      `width: ${offsetWidth / size}px ; height: ${offsetHeight / size}px`
+    );
+    document.getElementById("container").appendChild(div);
+  }
 }
 
 function changeColor(square) {
-    console.log(`color changed :  ${mousedown} on ${square}`);
-    if(mousedown)
-        square.style.backgroundColor = "black";
+  console.log(`color changed :  ${mousedown} on ${square}`);
+  if (mousedown) square.style.backgroundColor = "black";
 }
-
-
-
-
-
-
-
-
-
-

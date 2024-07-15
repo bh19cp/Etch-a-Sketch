@@ -1,77 +1,74 @@
-*{
-    margin: 0;
-    border: 0;
-    padding: 0;
-    color:#F0F465;
-    font-family: monospace;
-    background-color:#533A71;
-    text-decoration: none;
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  color: #f0f465;
+  font-family: monospace;
+  background-color: #533a71;
+  text-decoration: none;
 }
 
-header{
-    height: 20vh;
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    font-size: x-large;
+header {
+  height: 20vh;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  font-size: x-large;
 }
 
-main{
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5%;
+main {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
-.play-zone{
-    width: 60vw;
-    display: flex;
+.play-zone {
+  width: 90vw;
+  display: flex;
 }
 
-.settings{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    width: 10%;
-    height: 240px;
-    font-size: 3rem;
-    border: 4px #9CEC5B solid;
+.settings {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  width: 10%;
+  height: 240px;
+  font-size: 3rem;
+  border: 4px #9cec5b solid;
 }
 
 #container {
-	top: 30px;
-	outline:4px solid #9CEC5B ;
-	font-size: 0;
-	margin:auto;
-	height:300px;
-	max-width:300px;
-	padding: 0;
-	border: none;
+  top: 30px;
+  outline: 4px solid #9cec5b;
+  font-size: 0;
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+  padding: 0;
+  border: none;
 }
 
-.grid{
-    background-color: white;
-    display: inline-block;
-    outline:1px solid #000;
+.grid {
+  background-color: white;
+  display: inline-block;
+  outline: 1px solid #000;
 }
 
-.grid-square{
-    display:inline-table;
+.grid-square {
+  display: inline-table;
 }
 
-footer{
-    gap: 1rem;
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer {
+  gap: 1rem;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
